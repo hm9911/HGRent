@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="hu">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hgrent</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+        .header {
+            background-color: #000000;
+            color: #00bfff;
+            padding: 10px 0;
+            text-align: center;
+        }
+        .header-content {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .contact-info {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            font-size: 16px;
+            margin-bottom: 10px;
+        }
+        .contact-info a {
+            color: #00bfff;
+            text-decoration: none;
+        }
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+        }
+        nav a {
+            color: #00bfff;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .main-content {
+            position: relative;
+            background-size: cover;
+            background-position: center;
+            min-height: 800px;
+            align-items: center;
+            justify-content: center;
+            color: white;
+            text-align: center;
+            padding: 20px;
+        }
+        .main-content::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+    
+            z-index: 1;
+        }
+        .main-content > div {
+            position: relative;
+            z-index: 2;
+        }
+        .main-content .button {
+            background-color: #00bfff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+            margin: 10px;
+            font-size: 16px;
+        }
+        .main-content .button.secondary {
+            background-color: white;
+            color: #00bfff;
+        }
+        .about {
+            padding: 20px;
+        }
+        .footer {
+            background-color: black;
+            color: white;
+            padding: 20px 0;
+        }
+        .footer-content {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 20px;
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+        .footer-content > div {
+            padding: 10px;
+        }
+        .footer-content .about h2 {
+            color: #00bfff;
+            margin: 0;
+            font-size: 24px;
+        }
+        .footer-content .about p {
+            color: white;
+            margin: 10px 0;
+        }
+        .footer-content .about a {
+            background-color: #00bfff;
+            padding: 10px 20px;
+            border-radius: 10px;
+            color: white;
+            text-decoration: none;
+            display: inline-block;
+        }
+        .footer-content nav ul {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+        .footer-content nav ul li {
+            margin-bottom: 10px;
+            padding-top: 10px;
+        }
+        .footer-content .contact-info p {
+            margin: 5px 0;
+
+        }
+        .footer-content .brand h1 {
+            color: white;
+            padding-top: 60px;
+        }
+        .footer-content .brand p {
+            color: white;
+            margin: 5px 0;
+        }
+        @media (max-width: 768px) {
+            .footer-content {
+                grid-template-columns: 1fr;
+            }
+            .contact-info {
+                text-align: center;
+            }
+            .main-content {
+                padding: 10px;
+                min-height: 500px;
+            }
+        }
+
+        .callback-form {
+  max-width: 400px;
+  margin: 50px auto;
+  padding: 20px;
+  background: #0c0c06; 
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  font-family: 'Open Sans', sans-serif;
+}
+
+.callback-form h2 {
+  text-align: center;
+  color: #00bfff; 
+  margin-bottom: 20px;
+}
+
+.callback-form p {
+  text-align: center;
+  color: #00bfff;
+  padding-bottom: 20px;
+}
+
+.callback-form input[type="text"],
+.callback-form input[type="number"] {
+  width: 100%;
+  padding: 15px;
+  margin-bottom: 20px;
+  border: 1px solid #020101;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.callback-form input[type="submit"] {
+  width: 100%;
+  padding: 15px;
+  border: none;
+  border-radius: 4px;
+  background-color: #00bfff; 
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.callback-form input[type="submit"]:hover {
+  background-color: #ca6702; 
+}
+    </style>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+</head>
+<body>
+    <header class="header">
+        <div class="header-content">
+            <div class="contact-info">
+                <p><strong><a href="mailto:info@hgrent.hu">info@hgrent.hu</a></strong></p>
+                <p><strong><i class="fa fa-phone" style="font-size:16px"></i> <a href="tel:+36305966545">+36 30 596 6545</a></strong></p>
+            </div>
+            <nav>
+                <a href="Kezdőoldal.html"><strong>Kezdőoldal</strong></a>
+                <a href="Szolgáltatások.html"><strong>Szolgáltatások</strong></a>
+                <a href="Blog.html"><strong>Blog</strong></a>
+                <a href="Rólunk.html"><strong>Rólunk</strong></a>
+                <a href="Elérhetőség.html"><strong>Elérhetőség</strong></a>
+            </nav>
+        </div>
+    </header>
+
+    <main class="main-content">
+
+        <div class="callback-form">
+            <h2>Kérjen Visszahívást!</h2>
+            <p>A lehető leghamarabb felvesszük Önnel a kapcsolatot!</p>
+            <form action="https://api.web3forms.com/submit" method="POST" id="form" class="contact-left">
+              <input type="hidden" name="access_key" value="b429b8e5-2289-4afa-82f1-112fd59ccf23">
+              <input type="text" name="Teljes Név" placeholder="Teljes név" required>
+              <input type="number" name="Telefonszám" placeholder="Telefonszám" required>
+              <input type="text" name="Üzenet" placeholder="Üzenet" required>
+              <input type="hidden" name="from_name" value="Megkeresés">
+                <input type="hidden" name="subject" value="Új megkeresés érkezett">
+                <input type="checkbox" name="botcheck" class="hidden" style="display: none;">
+                <input type="hidden" name="redirect" value="Kezdőoldal.html">
+              <input type="submit" value="Küldés">
+            </form>
+          </div>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d341463.09897951956!2d19.104275!3d48.039198!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x476a9844a0c046e3%3A0xb00c428eabfa0e3!2sIpolyvece%2C%202669%20Magyarorsz%C3%A1g!5e0!3m2!1shu!2sus!4v1722377632622!5m2!1shu!2sus" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="about">
+                <h2>Rólunk</h2>
+                <p>Legyen szó esküvőről, szülinapról, előadásról vagy falunapról, fesztiválról a rendezvényeszközöket biztosítjuk hozzá! Sörpadok, sátrak, mobil hűtőkamrák, sörcsapok, vitrines hűtők bérlését kínáljuk.</p>
+                <a href="Rólunk.html">Tovább olvasom</a>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="Kezdőoldal.html">Kezdőlap</a></li>
+                    <li><a href="Szolgáltatások.html">Szolgáltatások</a></li>
+                    <li><a href="Blog.html">Blog</a></li>
+                    <li><a href="Rólunk.html">Rólunk</a></li>
+                    <li><a href="Elérhetőség.html">Elérhetőség</a></li>
+                </ul>
+            </nav>
+            <div class="contact-info">
+                <nav>
+                    <ul>
+                        <p><strong><a href="mailto:info@hgrent.hu">info@hgrent.hu</a></strong></p>
+                        <p><strong><i class="fa fa-phone" style="font-size:17px"></i> <a href="tel:+36305966545">+36 30 596 6545</a></strong></p>
+                    </ul>
+                </nav>
+            </div>
+            <div class="brand">
+                <h1>HG Rent</h1>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+
